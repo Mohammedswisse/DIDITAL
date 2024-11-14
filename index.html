@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="navbar" >
+    <div class="logo">
+            <img src="img/IMG_7759.png" alt="Descriptive Alt Text">
+        </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#"> خريطة المعرض</a></li>
+                <li><a href="#">الجدول الزمني</a></li>
+                <li><a href="#">الاسئلة الشائعة</a></li>
+                <li><a href="#"> خدمة العملاء</a></li>
+            </ul>
+        </nav>
+        <div class="actions">
+            <a href="login.php" class="btn">انضم إلينا</a>
+        </div>
+    </header>
+
+    
+    <!-- New Section -->
+   
+
+    <section class="custom-section">
+  <div class="card-container">
+    <!-- البطاقة الأولى -->
+    <div class="card">
+      <div class="content">
+        <div class="back">
+          <div class="back-content" >
+            <img src="img/images_canon_camera_1746.png" alt="Descriptive Alt Text"style="height: 80px;width: 80px;">
+          
+            <strong> صورة تذكرية </strong>
+        
+          </div>
+        </div>
+        <div class="front">
+          <div class="img">
+            <div class="circle"></div>
+            <div class="circle" id="right"></div>
+            <div class="circle" id="bottom"></div>
+          </div>
+          <div class="front-content">
+            <small class="badge">Pasta</small>
+            <div class="description">
+              <div class="title">
+                <p><strong>Spaguetti Bolognese</strong></p>
+                <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                  <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p class="card-footer">
+                30 Mins &nbsp; | &nbsp; 1 Serving
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- محتوى معلومات عنا -->
+    <div class="card">
+      <div class="content">
+          <div class="back">
+              <div class="back-content">
+                <img src="img/robot_128_44173.png" alt="Descriptive Alt Text"style="height: 80px;width: 80px;">
+          
+                <strong>  من نحن </strong>
+            
+              </div>
+          </div>
+          <div class="front">
+              <div class="img">
+                  <div class="circle"></div>
+                  <div class="circle" id="right"></div>
+                  <div class="circle" id="bottom"></div>
+              </div>
+              <div class="front-content">
+                  <small class="badge">Pasta</small>
+                  <div class="description">
+                      <div class="title">
+                          <button id="INFO" class="btn"> الاطلاع </button>
+                      </div>
+                      <p class="card-footer">
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- التظليم والنافذة المنبثقة خارج البطاقة -->
+  <div id="overlay" class="overlay"></div>
+  <div id="popup" class="popup">
+      <h2>DIGITAL</h2>
+      <p>نرحب بكم في نادي ديجيتال للروبوتات، الذي تأسس عام 2024، بهدف تعليم الشباب والأطفال أساسيات الإلكترونيات والبرمجة باستخدام. يتيح النادي للأعضاء من الشباب والأطفال فرصة استكشاف مجالات الابتكار واختراع حلول تكنولوجية لمشكلات معاصرة، مما يسهم في بناء جيل واعٍ وذكي.
+        ‎يُعتبر نادي ديجيتال للروبوتات رائدًا في هذا المجال، حيث يسعى إلى إنشاء مشاريع مبتكرة والمشاركة في المسابقات المحلية والدولية. نؤمن بأن الاستثمار في عقول الشباب والأطفال هو الطريق لبناء مستقبل مشرق، ونسعى لتوفير بيئة تعليمية مميزة تشجع على الإبداع والتفكير النقدي.</p>
+        <button class="btn" id="closeBtn">اغلاق</button>
+      </div>
+
+  <script>
+      // فتح النافذة المنبثقة وتظليم الخلفية
+      document.getElementById('INFO').addEventListener('click', function() {
+          document.getElementById('overlay').style.display = 'block';
+          document.getElementById('popup').style.display = 'block';
+      });
+
+     // إغلاق النافذة المنبثقة وإزالة التظليم
+document.getElementById('closeBtn').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+});
+  </script>
+                      
+   
+
+    <!-- محتوى المنتسبين -->
+    <div class="card">
+      <div class="content">
+          <div class="back">
+              <div class="back-content">
+                <img src="img/if-advantage-teamwork-1034367_88840.png" alt="Descriptive Alt Text"style="height: 80px;width: 80px;">
+          
+                <strong>  المنتسبين </strong>
+            
+              </div>
+          </div>
+          <div class="front">
+              <div class="img">
+                  <div class="circle"></div>
+                  <div class="circle" id="right"></div>
+                  <div class="circle" id="bottom"></div>
+              </div>
+              <div class="front-content">
+                  <small class="badge">Pasta</small>
+                  <div class="description">
+                      <div class="title">
+                          <button id="openPopupBtn" class="btn">عرض </button>
+                      </div>
+                      <p class="card-footer">
+                          30 Mins &nbsp; | &nbsp; 1 Serving
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- التظليم والنافذة المنبثقة خارج البطاقة -->
+  <div id="overlay2" class="overlay2"></div>
+  <div id="popup2" class="popup2">
+    <small class="badge">المنتسبين</small>
+    <div class="container2">
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.38 AM (1).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.38 AM (2).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.38 AM (3).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+    
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.38 AM.jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.39 AM (1).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.39 AM.jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.40 AM.jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.41 AM (1).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.41 AM (2).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.41 AM.jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.42 AM (1).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.42 AM (2).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.42 AM (2).jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+
+      <div class="card2">
+        <p class="title2">
+          <img src="MM/WhatsApp Image 2024-11-14 at 2.08.42 AM.jpeg" alt="Descriptive Alt Text" style="height: 150PX; width: 130PX;">
+        </p>
+      </div>
+    </div>
+      <button class="btn" onclick="closePopup()">إغلاق</button>
+  </div>
+
+  <script>
+      // فتح النافذة المنبثقة وتظليم الخلفية
+      document.getElementById('openPopupBtn').addEventListener('click', function() {
+          document.getElementById('overlay2').style.display = 'block';
+          document.getElementById('popup2').style.display = 'block';
+      });
+
+      // إغلاق النافذة المنبثقة وإزالة التظليم
+      function closePopup() {
+          document.getElementById('overlay2').style.display = 'none';
+          document.getElementById('popup2').style.display = 'none';
+      }
+  </script>
+
+
+    <div class="card">
+      <div class="content">
+        <div class="back">
+          <div class="back-content">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px" height="50px" fill="#ffffff">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 4.72 5 12 7 12s7-7.28 7-12c0-3.87-3.13-7-7-7zm0 10c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+            </svg>
+            <strong> موقع </strong>
+          </div>
+        </div>
+        <div class="front">
+          <div class="img">
+            <div class="circle"></div>
+            <div class="circle" id="right"></div>
+            <div class="circle" id="bottom"></div>
+          </div>
+          <div class="front-content">
+            <small class="badge">Pasta</small>
+            <div class="description">
+              <div class="title">
+                <p><strong>Spaguetti Bolognese</strong></p>
+                <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                  <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p class="card-footer">
+                30 Mins &nbsp; | &nbsp; 1 Serving
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <div class="back">
+          <div class="back-content" >
+            <img src="img/images_canon_camera_1746.png" alt="Descriptive Alt Text"style="height: 80px;width: 80px;">
+          
+            <strong> صورة تذكرية </strong>
+          </div>
+        </div>
+        <div class="front">
+          <div class="img">
+            <div class="circle"></div>
+            <div class="circle" id="right"></div>
+            <div class="circle" id="bottom"></div>
+          </div>
+          <div class="front-content">
+            <small class="badge">Pasta</small>
+            <div class="description">
+                <div class="title">
+                    <button class="btn" id="startBtn">اخد صوره   </button>
+
+    <script>
+        document.getElementById('startBtn').addEventListener('click', function() {
+            window.open('camera.html', '_blank', 'width=800,height=600');
+        });
+        </script>
+                <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                  <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p class="card-footer">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <div class="back">
+          <div class="back-content">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px" height="50px" fill="#ffffff">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 4.72 5 12 7 12s7-7.28 7-12c0-3.87-3.13-7-7-7zm0 10c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+            </svg>
+            <strong> موقع </strong>
+          </div>
+        </div>
+        <div class="front">
+          <div class="img">
+            <div class="circle"></div>
+            <div class="circle" id="right"></div>
+            <div class="circle" id="bottom"></div>
+          </div>
+          <div class="front-content">
+            <small class="badge">Pasta</small>
+            <div class="description">
+              <div class="title">
+                <p><strong>Spaguetti Bolognese</strong></p>
+                <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                  <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p class="card-footer">
+                30 Mins &nbsp; | &nbsp; 1 Serving
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- يمكن إضافة المزيد من البطاقات هنا -->
+  </div>
+</section>
+
+
+    <!-- Existing content -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
